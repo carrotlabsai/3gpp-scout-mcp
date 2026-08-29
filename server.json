@@ -7,7 +7,8 @@
   "websiteUrl": "https://3gppscout.com/mcp/?src=github",
   "repository": {
     "url": "https://github.com/carrotlabsai/3gpp-scout-mcp",
-    "source": "github"
+    "source": "github",
+    "id": "1350152600"
   },
   "icons": [
     {

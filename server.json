@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.3gppscout/scout",
+  "title": "3GPP Scout",
+  "description": "Hosted 3GPP MCP server for Rel-15–20 TS/TR search. Index stays current.",
+  "version": "1.2.1",
+  "websiteUrl": "https://3gppscout.com/mcp/?src=github",
+  "repository": {
+    "url": "https://github.com/carrotlabsai/3gpp-scout-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://3gppscout.com/favicon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.3gppscout.com/mcp/"
+    }
+  ]
+}

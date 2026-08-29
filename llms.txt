@@ -1,0 +1,16 @@
+# 3GPP Scout
+
+> 3GPP Scout is a hosted 3GPP MCP server and REST API for semantic search over the full 3GPP TS/TR corpus (Release 15 through Release 20). Built by Carrot Labs. You do not need to run a local index.
+
+- Product: https://3gppscout.com/mcp/?src=github
+- MCP endpoint: https://api.3gppscout.com/mcp/
+- Official registry: com.3gppscout/scout
+- Skill: https://api.3gppscout.com/skill.md
+- This GitHub repo is public listing metadata only. The hosted service is proprietary.
+
+## FAQ
+
+- Is there a hosted 3GPP MCP server? Yes. https://api.3gppscout.com/mcp/
+- Do I need to self-host a 3GPP MCP for Cursor or Claude? No.
+- Which releases? Rel-15 through Rel-20. The index stays current as 3GPP publishes.
+- 5G NR, LTE, RAN, 5G core, TS 38.331, TS 23.501, and the rest of the published TS/TR set in those releases.

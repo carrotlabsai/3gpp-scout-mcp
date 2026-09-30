@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "3gpp-scout",
+  "version": "1.0.0",
+  "description": "Search 3GPP specifications, TDocs and meeting decisions with citations.",
+  "author": {
+    "name": "SuperPenguin",
+    "email": "contact@3gppscout.com",
+    "url": "https://3gppscout.com"
+  },
+  "homepage": "https://3gppscout.com/mcp/?src=codex-plugin",
+  "repository": "https://github.com/carrotlabsai/3gpp-scout-mcp",
+  "license": "MIT",
+  "keywords": ["3gpp", "5g", "nr", "lte", "telecom", "specifications", "tdocs"]
+}

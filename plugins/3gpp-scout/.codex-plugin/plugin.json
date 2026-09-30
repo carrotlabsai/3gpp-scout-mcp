@@ -1,0 +1,33 @@
+{
+  "name": "3gpp-scout",
+  "version": "1.0.0",
+  "description": "Search 3GPP specifications, TDocs and meeting decisions with citations.",
+  "author": {
+    "name": "SuperPenguin",
+    "email": "contact@3gppscout.com",
+    "url": "https://3gppscout.com"
+  },
+  "homepage": "https://3gppscout.com/mcp/?src=codex-plugin",
+  "repository": "https://github.com/carrotlabsai/3gpp-scout-mcp",
+  "license": "MIT",
+  "keywords": ["3gpp", "5g", "nr", "lte", "telecom", "specifications", "tdocs"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "3GPP Scout",
+    "shortDescription": "Search 3GPP specs and TDocs",
+    "longDescription": "3GPP Scout helps telecom engineers, standards delegates and consultants find answers in 3GPP specifications, meeting contributions (TDocs) and meeting decisions. Ask about a clause, a protocol message or a company's position, and get excerpts with spec number, version and section so you can check the source. Requires a Scout account; you sign in on install. 3GPP Scout is an independent product of SuperPenguin and is not affiliated with, endorsed or sponsored by 3GPP, ETSI or any 3GPP Organizational Partner. 3GPP\u2122 is a trade mark of ETSI registered for the benefit of its Members and of the 3GPP Organizational Partners. Excerpts are quoted for reference and the 3GPP documents govern.",
+    "developerName": "SuperPenguin",
+    "category": "Research",
+    "capabilities": ["Read"],
+    "websiteURL": "https://3gppscout.com/mcp/?src=codex-plugin",
+    "privacyPolicyURL": "https://3gppscout.com/privacy.html",
+    "termsOfServiceURL": "https://3gppscout.com/terms.html",
+    "defaultPrompt": [
+      "What does TS 23.501 say about PDU session anchor relocation?",
+      "Find the RRC reconfiguration message in TS 38.331 Rel-19",
+      "What did SA2 agree on NTN in its last meeting?"
+    ],
+    "brandColor": "#0F766E"
+  }
+}

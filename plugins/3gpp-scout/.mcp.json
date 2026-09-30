@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "3gpp-scout": {
+      "url": "https://api.3gppscout.com/mcp/"
+    }
+  }
+}

@@ -57,7 +57,16 @@ claude mcp add --transport http --scope user 3gpp-scout https://api.3gppscout.co
 
 Then `/mcp` and connect `3gpp-scout`.
 
-### OpenAI Codex
+### Codex and ChatGPT desktop plugin
+
+```bash
+codex plugin marketplace add carrotlabsai/3gpp-scout-mcp
+codex plugin add 3gpp-scout@3gpp-scout
+```
+
+In the ChatGPT desktop app, open Plugins, add the plugin marketplace `carrotlabsai/3gpp-scout-mcp`, choose 3GPP Scout and install. Sign in with your Scout account when asked. The plugin bundles the hosted MCP server and a short skill; it lives in [`plugins/3gpp-scout`](plugins/3gpp-scout).
+
+### OpenAI Codex (MCP only)
 
 ```bash
 codex mcp add 3gpp-scout --url https://api.3gppscout.com/mcp/
@@ -116,6 +125,8 @@ Sign up: [dashboard.3gppscout.com](https://dashboard.3gppscout.com)
 | `server.json` | Public MCP Registry metadata (remote server only) |
 | `SKILL.md` | Short agent skill that points at the hosted server |
 | `llms.txt` | Same facts in agent-readable form |
+| `.agents/plugins/marketplace.json` | Codex and ChatGPT desktop plugin marketplace |
+| `plugins/3gpp-scout/` | The 3GPP Scout plugin (MCP server wiring and skill) |
 
 `server.json` is discovery metadata. It does not contain credentials, prompts, or the search implementation. Do not open issues asking for the private monorepo or a self-host package. That is not what this repo is.
 

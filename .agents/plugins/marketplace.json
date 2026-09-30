@@ -1,0 +1,20 @@
+{
+  "name": "3gpp-scout",
+  "interface": {
+    "displayName": "3GPP Scout"
+  },
+  "plugins": [
+    {
+      "name": "3gpp-scout",
+      "source": {
+        "source": "local",
+        "path": "./plugins/3gpp-scout"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}

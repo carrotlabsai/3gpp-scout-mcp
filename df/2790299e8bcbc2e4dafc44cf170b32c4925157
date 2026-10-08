@@ -1,0 +1,27 @@
+scripts/build-plugin.py
+  s_fcbf7b7a6e078b::t_239934c3418034 1-78
+plugins/3gpp-scout/.codex-plugin/plugin.json
+  s_fcbf7b7a6e078b::t_8ca10a018fa41b 3,6,13-21,27-28,30-33,38-40,42-108
+plugins/3gpp-scout/assets/logo.svg
+  s_fcbf7b7a6e078b::t_b3cd75a6d6f880 1-6
+plugins/3gpp-scout/plugin.json
+  s_fcbf7b7a6e078b::t_61cb2d1ea79300 4,7,14-108
+plugins/3gpp-scout/skills/3gpp-scout/SKILL.md
+  s_fcbf7b7a6e078b::t_d30d23cc32fdd5 26-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "df2790299e8bcbc2e4dafc44cf170b32c4925157",
+  "prompts": {},
+  "sessions": {
+    "s_fcbf7b7a6e078b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a118a1-ea3e-7c01-a8f6-b3bf25484346",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Chris Acker <christopheracker1@gmail.com>"
+    }
+  }
+}

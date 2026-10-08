@@ -23,3 +23,9 @@ For the full tool guide, read the `scout://skill-guide` resource.
 - Invent spec text. Search, then cite.
 - Rebuild or export a whole specification. Give short excerpts and point to the 3GPP document.
 - Say or imply that 3GPP Scout is endorsed by 3GPP or ETSI. It is an independent product.
+
+## Follow confirmation and limits
+
+`find_topics_to_follow` previews possible targets without saving. Show the targets and delivery settings, then wait for the user to confirm before calling `follow_topic` with `confirmed: true`. `update_followed_topic` overwrites settings. `unfollow_topic` removes a saved follow and cannot be undone; confirm the specific follow first.
+
+Scout covers 3GPP documents; state missing coverage instead of inventing text from other standards. Purchases are unavailable inside this plugin. Relay quota usage and reset information without plan prices, checkout links or upgrade prompts.

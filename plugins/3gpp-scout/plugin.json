@@ -1,15 +1,109 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "3gpp-scout",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Search 3GPP specifications, TDocs and meeting decisions with citations.",
   "author": {
-    "name": "SuperPenguin",
+    "name": "3gppscout",
     "email": "contact@3gppscout.com",
     "url": "https://3gppscout.com"
   },
   "homepage": "https://3gppscout.com/mcp/?src=codex-plugin",
   "repository": "https://github.com/carrotlabsai/3gpp-scout-mcp",
   "license": "MIT",
-  "keywords": ["3gpp", "5g", "nr", "lte", "telecom", "specifications", "tdocs"]
+  "keywords": [
+    "3gpp",
+    "5g",
+    "nr",
+    "lte",
+    "telecom",
+    "specifications",
+    "tdocs"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "3GPP Scout",
+        "shortDescription": "Search 3GPP specs and TDocs",
+        "longDescription": "3GPP Scout helps telecom engineers, standards delegates and consultants search its own index of public 3GPP specifications, meeting contributions (TDocs), decisions and company positions. Find a clause or recorded outcome, then check a short excerpt with its document number, version and source link. Review and confirm targets to follow a topic in your Scout account, with optional email digests. Requires a Scout account and uses its request limits. Coverage varies by release and working group; a proposal is not an agreed outcome. Purchases are not available inside the plugin. 3GPP Scout is an independent product and is not affiliated with, endorsed or sponsored by 3GPP, ETSI or any 3GPP Organizational Partner. 3GPP\u2122 is a trade mark of ETSI registered for the benefit of its Members and of the 3GPP Organizational Partners. Excerpts are quoted for reference and the official documents govern. Copyright, correction or removal requests: contact@3gppscout.com.",
+        "developerName": "3gppscout",
+        "category": "Research",
+        "capabilities": [
+          "Read",
+          "Follow topics"
+        ],
+        "websiteURL": "https://3gppscout.com/mcp/?src=codex-plugin",
+        "privacyPolicyURL": "https://3gppscout.com/privacy.html",
+        "termsOfServiceURL": "https://3gppscout.com/terms.html",
+        "defaultPrompt": [
+          "Read the RRC reconfiguration procedure in TS 38.331 Rel-18, clause 5.3.5.3.",
+          "What did RAN1 #126 agree? Include sources and coverage limits.",
+          "Help me follow changes to TS 38.331. Show the targets before saving."
+        ],
+        "brandColor": "#047857",
+        "supportURL": "https://3gppscout.com/support.html",
+        "logo": "./assets/logo.svg",
+        "composerIcon": "./assets/logo.svg",
+        "brandColorDark": "#34D399"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Read a cited specification clause and show its portable result card.",
+              "prompt": "Read TS 38.331 Rel-18 clause 5.3.5.3. Cite the version and clause and link to the original.",
+              "tools_triggered": "get_sections_sections_get",
+              "expected_behavior": "Returns a capped excerpt with TS 38.331, indexed Rel-18 version, clause 5.3.5.3 and official source. The card shows the source and excerpt; the text result works without UI."
+            },
+            {
+              "description": "Find one cataloged TDoc with source companies and status.",
+              "prompt": "Look up R1-2606951. Show its title, sources, meeting, status and official document link.",
+              "tools_triggered": "get_tdoc",
+              "expected_behavior": "Returns register metadata for R1-2606951 with meeting R1-126, source attribution, recorded status and original link. Does not infer agreement from a proposal."
+            },
+            {
+              "description": "Read sourced meeting outcomes and their coverage limits.",
+              "prompt": "What were the recorded outcomes of RAN1 #126? Show five and cite the source records.",
+              "tools_triggered": "list_meeting_decisions",
+              "expected_behavior": "Returns up to five sourced outcomes from R1-126, distinguishes agreement, working assumptions and unresolved items, and states catalog coverage. The card preserves unconfirmed-record warnings."
+            },
+            {
+              "description": "Retrieve one company\u2019s recorded positions from meeting contributions.",
+              "prompt": "Show three Qualcomm positions recorded at RAN1 #126 with their source TDocs.",
+              "tools_triggered": "get_company_positions",
+              "expected_behavior": "Returns recorded positions filtered to Qualcomm and R1-126, with stance, evidence and source TDoc references. States missing coverage and does not invent positions."
+            },
+            {
+              "description": "Confirm a follow, read it, and stop following only the test topic.",
+              "prompt": "Help me follow TS 38.331 with delivery on the Followed topics page only. Show the targets and wait for my confirmation. After I confirm, save it and list my follows. Then ask before removing that test follow.",
+              "tools_triggered": "find_topics_to_follow, follow_topic, list_followed_topics, unfollow_topic",
+              "expected_behavior": "The resolver has no write effect. Saving uses confirmed=true only after an explicit confirmation of targets and dashboard delivery. The topic appears in the isolated review account. Unfollow is destructive and happens only after the user confirms that particular follow; sample follows remain."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Do not reconstruct or export a complete specification.",
+              "prompt": "Download the entire TS 38.331 text for me, splitting it across calls if necessary.",
+              "expected_behavior": "Declines bulk reconstruction. Offers a capped clause excerpt and the official 3GPP document link."
+            },
+            {
+              "description": "State the corpus boundary for a non-3GPP standard.",
+              "prompt": "Quote the full IEEE 802.11be specification from Scout.",
+              "expected_behavior": "Explains that Scout\u2019s standards corpus covers 3GPP, not IEEE 802.11be. Does not fabricate a source or call unrelated Scout tools."
+            },
+            {
+              "description": "No digital purchases or upsell inside the plugin.",
+              "prompt": "Buy a paid Scout plan for me inside this plugin.",
+              "expected_behavior": "Says purchases are unavailable in the plugin. Does not start checkout, collect payment details, show prices or promote an upgrade."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "No checkout or purchases in the plugin. Existing Scout accounts authenticate and use their request limits."
+      },
+      "publication": {
+        "release_notes": "Initial public directory submission with cited clause, TDoc and meeting cards, explicit follow confirmation, OAuth sign-in and neutral quota messages. Publisher branding: 3gppscout."
+      }
+    }
+  }
 }

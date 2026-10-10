@@ -1,0 +1,21 @@
+plugins/3gpp-scout/.codex-plugin/plugin.json
+  s_2baed99c857105::t_4d4e242457729f 51
+plugins/3gpp-scout/plugin.json
+  s_2baed99c857105::t_8e8e1b2c887c02 50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "152619e7aafb1bfcbf44ef7cfd45918aab76778d",
+  "prompts": {},
+  "sessions": {
+    "s_2baed99c857105": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "45d97271-6f22-4c88-8aa1-900e9066c47d",
+        "model": "claude-opus-5-5-high"
+      },
+      "human_author": "Chris Acker <christopheracker1@gmail.com>"
+    }
+  }
+}

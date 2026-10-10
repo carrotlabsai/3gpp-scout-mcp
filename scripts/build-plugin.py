@@ -17,7 +17,7 @@ def validate(root=ROOT):
     extension = portable["extensions"]["com.openai"]
     ui = extension["interface"]
     assert compat["interface"] == ui, "Portable and Codex listing metadata differ"
-    assert portable["author"]["name"] == ui["developerName"] == "3gppscout"
+    assert portable["author"]["name"] == ui["developerName"] == "Carrot Labs AI, Inc."
     assert portable["version"] == compat["version"]
     for key, maximum in {"displayName": 30, "shortDescription": 30, "longDescription": 4000, "developerName": 80}.items():
         assert 0 < len(ui[key]) <= maximum, key

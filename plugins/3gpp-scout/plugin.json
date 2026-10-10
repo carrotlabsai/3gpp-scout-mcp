@@ -47,6 +47,7 @@
         "brandColorDark": "#34D399"
       },
       "review": {
+        "demo_recording_url": "https://3gppscout.com/mcp/codex-walkthrough.mp4",
         "test_cases": {
           "positive": [
             {

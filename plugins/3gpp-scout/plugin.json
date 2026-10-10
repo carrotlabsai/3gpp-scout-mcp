@@ -1,10 +1,10 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "3gpp-scout",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Search 3GPP specifications, TDocs and meeting decisions with citations.",
   "author": {
-    "name": "3gppscout",
+    "name": "Carrot Labs AI, Inc.",
     "email": "contact@3gppscout.com",
     "url": "https://3gppscout.com"
   },
@@ -26,7 +26,7 @@
         "displayName": "3GPP Scout",
         "shortDescription": "Search 3GPP specs and TDocs",
         "longDescription": "3GPP Scout helps telecom engineers, standards delegates and consultants search its own index of public 3GPP specifications, meeting contributions (TDocs), decisions and company positions. Find a clause or recorded outcome, then check a short excerpt with its document number, version and source link. Review and confirm targets to follow a topic in your Scout account, with optional email digests. Requires a Scout account and uses its request limits. Coverage varies by release and working group; a proposal is not an agreed outcome. Purchases are not available inside the plugin. 3GPP Scout is an independent product and is not affiliated with, endorsed or sponsored by 3GPP, ETSI or any 3GPP Organizational Partner. 3GPP\u2122 is a trade mark of ETSI registered for the benefit of its Members and of the 3GPP Organizational Partners. Excerpts are quoted for reference and the official documents govern. Copyright, correction or removal requests: contact@3gppscout.com.",
-        "developerName": "3gppscout",
+        "developerName": "Carrot Labs AI, Inc.",
         "category": "Research",
         "capabilities": [
           "Read",
@@ -102,7 +102,7 @@
         "commerce_description": "No checkout or purchases in the plugin. Existing Scout accounts authenticate and use their request limits."
       },
       "publication": {
-        "release_notes": "Initial public directory submission with cited clause, TDoc and meeting cards, explicit follow confirmation, OAuth sign-in and neutral quota messages. Publisher branding: 3gppscout."
+        "release_notes": "Initial public directory submission with cited clause, TDoc and meeting cards, explicit follow confirmation, OAuth sign-in and neutral quota messages. Published by Carrot Labs AI, Inc., the company that operates 3GPP Scout."
       }
     }
   }

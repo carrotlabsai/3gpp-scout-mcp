@@ -9,6 +9,11 @@ import zipfile
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1] / "plugins" / "3gpp-scout"
+CATEGORIES = {
+    "Productivity", "Creativity", "Developer Tools", "Business & Operations", "Data & Analytics",
+    "Communication", "Education & Research", "Security", "Finance", "Healthcare", "Travel",
+    "Entertainment", "Other",
+}
 
 
 def validate(root=ROOT):
@@ -19,6 +24,7 @@ def validate(root=ROOT):
     assert compat["interface"] == ui, "Portable and Codex listing metadata differ"
     assert portable["author"]["name"] == ui["developerName"] == "Carrot Labs AI, Inc."
     assert portable["version"] == compat["version"]
+    assert ui["category"] in CATEGORIES, ui["category"]
     for key, maximum in {"displayName": 30, "shortDescription": 30, "longDescription": 4000, "developerName": 80}.items():
         assert 0 < len(ui[key]) <= maximum, key
     for key in ("websiteURL", "supportURL", "privacyPolicyURL", "termsOfServiceURL"):

@@ -1,0 +1,26 @@
+scripts/build-plugin.py
+  s_bac244f497d48d::t_b21647554e2ac7 27
+  s_bac244f497d48d::t_a8d918afcaf3f5 12-16
+.agents/plugins/marketplace.json
+  s_bac244f497d48d::t_788cc5da9ee540 17
+plugins/3gpp-scout/.codex-plugin/plugin.json
+  s_bac244f497d48d::t_7ac8e028974046 3,29
+plugins/3gpp-scout/plugin.json
+  s_bac244f497d48d::t_ee4f96ea78e48e 4,30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a9489d08e783d5d6258e7b6557ee35242b842bb2",
+  "prompts": {},
+  "sessions": {
+    "s_bac244f497d48d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b86c932c-f919-4021-adb1-de33fc63f4b8",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Chris Acker <christopheracker1@gmail.com>"
+    }
+  }
+}

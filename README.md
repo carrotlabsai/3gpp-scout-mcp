@@ -57,6 +57,11 @@ claude mcp add --transport http --scope user 3gpp-scout https://api.3gppscout.co
 
 Then `/mcp` and connect `3gpp-scout`.
 
+### ChatGPT plugin directory
+
+<!-- Directory link: the general plugin directory for now. Swap in the direct 3GPP Scout listing URL (one line) once the published listing URL is confirmed. -->
+Install 3GPP Scout from the [ChatGPT plugin directory](https://chatgpt.com/plugins). It signs in with your Scout account and works in ChatGPT and Codex.
+
 ### Codex and ChatGPT desktop plugin
 
 ```bash

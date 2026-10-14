@@ -59,8 +59,7 @@ Then `/mcp` and connect `3gpp-scout`.
 
 ### ChatGPT plugin directory
 
-<!-- Directory link: the general plugin directory for now. Swap in the direct 3GPP Scout listing URL (one line) once the published listing URL is confirmed. -->
-Install 3GPP Scout from the [ChatGPT plugin directory](https://chatgpt.com/plugins). It signs in with your Scout account and works in ChatGPT and Codex.
+Install 3GPP Scout from the [ChatGPT plugin directory](https://chatgpt.com/plugins/plugin_asdk_app_6acb351336d481918e036c4d9b611e4f). It signs in with your Scout account and works in ChatGPT and Codex.
 
 ### Codex and ChatGPT desktop plugin
 

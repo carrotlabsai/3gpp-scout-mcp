@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Carrot Labs
+Copyright (c) 2026 Carrot Labs AI, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,9 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This repository contains listing metadata and documentation only. The 3GPP Scout
-hosted MCP service, search index, and server implementation are not included
-and remain proprietary to Carrot Labs.

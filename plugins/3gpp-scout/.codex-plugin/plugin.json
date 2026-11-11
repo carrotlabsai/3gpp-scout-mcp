@@ -1,6 +1,6 @@
 {
   "name": "3gpp-scout",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Search 3GPP specifications, TDocs and meeting decisions with citations.",
   "author": {
     "name": "Carrot Labs AI, Inc.",
@@ -54,7 +54,7 @@
             {
               "description": "Read a cited specification clause and show its portable result card.",
               "prompt": "Read TS 38.331 Rel-18 clause 5.3.5.3. Cite the version and clause and link to the original.",
-              "tools_triggered": "get_sections_sections_get",
+              "tools_triggered": "read_clause",
               "expected_behavior": "Returns a capped excerpt with TS 38.331, indexed Rel-18 version, clause 5.3.5.3 and official source. The card shows the source and excerpt; the text result works without UI."
             },
             {
@@ -66,14 +66,14 @@
             {
               "description": "Read sourced meeting outcomes and their coverage limits.",
               "prompt": "What were the recorded outcomes of RAN1 #126? Show five and cite the source records.",
-              "tools_triggered": "list_meeting_decisions",
+              "tools_triggered": "get_meeting_decisions",
               "expected_behavior": "Returns up to five sourced outcomes from R1-126, distinguishes agreement, working assumptions and unresolved items, and states catalog coverage. The card preserves unconfirmed-record warnings."
             },
             {
-              "description": "Retrieve one company\u2019s recorded positions from meeting contributions.",
-              "prompt": "Show three Qualcomm positions recorded at RAN1 #126 with their source TDocs.",
-              "tools_triggered": "get_company_positions",
-              "expected_behavior": "Returns recorded positions filtered to Qualcomm and R1-126, with stance, evidence and source TDoc references. States missing coverage and does not invent positions."
+              "description": "Retrieve one company\u2019s recorded positions on a topic from meeting contributions.",
+              "prompt": "What did Qualcomm propose on AI/ML beam management at RAN1 #126? Show three positions with their source TDocs.",
+              "tools_triggered": "company_positions",
+              "expected_behavior": "Returns three Qualcomm proposals on AI/ML beam management from R1-126 contributions, each with a verbatim quote and its source TDoc number and link. States that positions are proposals, not agreements, and does not invent positions."
             },
             {
               "description": "Confirm a follow, read it, and stop following only the test topic.",
@@ -104,7 +104,7 @@
         "commerce_description": "No checkout or purchases in the plugin. Existing Scout accounts authenticate and use their request limits."
       },
       "publication": {
-        "release_notes": "Initial public directory submission with cited clause, TDoc and meeting cards, explicit follow confirmation, OAuth sign-in and neutral quota messages. Published by Carrot Labs AI, Inc., the company that operates 3GPP Scout."
+        "release_notes": "Updates the bundled skill and review cases to the current tool names. The MCP server now exposes ten read-only research tools named for intent (search_specs, read_clause, clause_history, find_conformance_tests, lookup_reference, search_meeting_documents, get_meeting_decisions, find_meetings, get_tdoc, company_positions) plus the unchanged follow tools. Those tool changes went live through continuous review; the 1.1.2 skill still named the old tools. Listing text, icons, URLs, authentication and the MCP server URL are unchanged."
       }
     }
   }

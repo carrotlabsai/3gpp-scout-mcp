@@ -1,6 +1,6 @@
 ---
 name: 3gpp-scout
-description: Answer questions about 3GPP specifications (TS and TR, Rel-15 through Rel-20), TDocs, meetings and company positions with the 3GPP Scout MCP tools. Use for 5G NR, LTE, RAN, 5G core, NAS, security or charging questions that need spec text and citations.
+description: Answer questions about 3GPP specifications (TS and TR, Rel-15 through Rel-20), TDocs, meeting decisions and company positions with the 3GPP Scout MCP tools. Use for 5G NR, LTE, RAN, 5G core, NAS, security or charging questions that need spec text and citations.
 ---
 
 # 3GPP Scout
@@ -9,19 +9,22 @@ Use the `3gpp-scout` MCP tools from this plugin when the user needs 3GPP specifi
 
 ## Workflow
 
-Tool names below are the short form. Some servers list them with a route suffix, for example `search_text_search_text_post` or `get_sections_sections_get`; they are the same tools.
+1. Find where the behavior is defined. Use `lookup_reference` for a cause code, timer, information element, message name, or a term or abbreviation a spec defines. Use `search_specs` for everything else. It returns normative specs (requirements, architecture, protocol) unless you set `role`.
+2. Read the defining clause with `read_clause` before quoting it. When a long clause comes back truncated, call it again with `term` to read the part around a word, value or cause number.
+3. When the release matters, check `clause_history` for which releases changed the clause.
+4. For what is changing or still under discussion, use `search_meeting_documents` and `get_meeting_decisions`. Find meeting IDs with `find_meetings`. Agreements reach the specs months later.
+5. For one TDoc, use `get_tdoc`. For what companies proposed, supported or opposed on a topic, use `company_positions` with a topic and, if the user names them, companies and a meeting.
+6. Cite every quote with spec number, version and clause, or TDoc number, and link the official 3GPP source the tool returns.
 
-1. Search first with `search_text`. Filter by `doc_number` (for example `38.331`), `release` (for example `Rel-19`) or series when the user names them.
-2. Read the clause with `get_sections` using the document and section from the search hit before quoting it.
-3. For TDocs and meetings, use `search_tdocs`, `get_tdoc`, `list_meetings` and `list_meeting_decisions`.
-4. Cite every quote with spec number, version and clause, and link the 3GPP source when the tool returns one.
+Every result has a role. Conformance test specs test a requirement defined elsewhere: cite the clause in `tested_clauses`, not the test. Use `find_conformance_tests` only when the user asks how a requirement is tested.
 
-For the full tool guide, read the `scout://skill-guide` resource.
+For the full guide, read the `scout://guide` resource.
 
 ## Do not
 
-- Invent spec text. Search, then cite.
+- Invent spec text. Look it up, read it, then cite it.
 - Rebuild or export a whole specification. Give short excerpts and point to the 3GPP document.
+- Present a proposal or a feature-lead summary as an agreement. Only `get_meeting_decisions` records what a meeting agreed.
 - Say or imply that 3GPP Scout is endorsed by 3GPP or ETSI. It is an independent product.
 
 ## Follow confirmation and limits

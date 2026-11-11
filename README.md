@@ -85,7 +85,7 @@ codex mcp login 3gpp-scout
 
 ### Verify
 
-Call `list_documents_documents_get` with `doc_number=38.331` and `release=Rel-19`. You should see indexed versions of TS 38.331. Do not list the entire corpus as a health check.
+Ask your agent to call `read_clause` with `spec=38.331`, `clause=5.3.5.3` and `release=Rel-18`. You should get the clause text with its version and a link to the official 3GPP source. Do not list the entire corpus as a health check.
 
 Setup prompt for agents: [api.3gppscout.com/agent-setup/prompt.md](https://api.3gppscout.com/agent-setup/prompt.md)
 
@@ -95,17 +95,13 @@ These are the tools the live server lists today. Names are the exact strings you
 
 | Group | Tools |
 |---|---|
-| Specification search | `search_text_search_text_post` (text, by meaning and by exact values such as numbers and parameter names), `search_images_search_images_post` (figures and diagrams), `search_combined_search_combined_post` (text and figures together) |
-| Specification reading | `list_documents_documents_get`, `get_document_documents`, `list_sections_sections_toc_get` (table of contents), `get_sections_sections_get`, `get_sections_batch` (up to 10 clauses in one call) |
-| IETF RFCs | `search_ietf_rfcs`, `get_rfc_section` |
-| TDocs | `search_tdocs`, `get_tdoc`, `get_tdocs_batch` (up to 10), `list_tdocs`, `fetch_tdoc` (fetch and parse one public TDoc on demand) |
-| Meetings and decisions | `list_meetings`, `get_meeting`, `list_meeting_decisions` |
-| Companies and positions | `resolve_organization`, `get_organization`, `get_company_positions`, `search_positions` |
-| News | `search_news` |
+| Specifications | `lookup_reference` (cause codes, timers, IEs, messages and defined terms), `search_specs`, `read_clause`, `clause_history` (which releases changed a clause), `find_conformance_tests` |
+| Meetings and TDocs | `search_meeting_documents`, `get_meeting_decisions`, `find_meetings`, `get_tdoc` |
+| Companies and positions | `company_positions` |
 | Follow topics (signed-in user) | `find_topics_to_follow`, `list_followed_topics`, `get_followed_topic_updates`, `follow_topic`, `update_followed_topic`, `unfollow_topic` |
-| Private preview | `compare_proposal`, `get_proposal_comparison`, `follow_patent` |
+| Private preview | `find_simulation_results`, `compare_proposal`, `get_proposal_comparison`, `follow_patent` |
 
-Search and read tools are read-only. `follow_topic`, `update_followed_topic`, `unfollow_topic` and `follow_patent` change the signed-in user's Scout account, and `fetch_tdoc` may download a public TDoc into Scout's catalog. Tool names and parameters can change; the skill guide is the current reference.
+Search and read tools are read-only. `follow_topic`, `update_followed_topic`, `unfollow_topic` and `follow_patent` change the signed-in user's Scout account. Tool names and parameters can change; the skill guide is the current reference.
 
 Full agent skill (parameters, filters, workflows): [api.3gppscout.com/skill.md](https://api.3gppscout.com/skill.md). ClawHub listing: [chriscarrotlabs/3gpp-scout](https://clawhub.ai/chriscarrotlabs/3gpp-scout).
 

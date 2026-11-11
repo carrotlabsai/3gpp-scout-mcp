@@ -17,7 +17,7 @@ https://api.3gppscout.com/mcp/
 
 Streamable HTTP, OAuth 2.1. No Scout API key in MCP config. After connect, read `scout://skill-guide` or [https://api.3gppscout.com/skill.md](https://api.3gppscout.com/skill.md) for tools, filters, and workflows.
 
-Verify with `list_documents` filtered to `doc_number=38.331` and `release=Rel-19`.
+Verify with `read_clause` for `spec=38.331`, `clause=5.3.5.3`, `release=Rel-18`.
 
 ## Do not
 

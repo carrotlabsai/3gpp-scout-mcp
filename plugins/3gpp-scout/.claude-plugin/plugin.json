@@ -1,0 +1,30 @@
+{
+  "name": "3gpp-scout",
+  "displayName": "3GPP Scout",
+  "version": "1.2.1",
+  "description": "Search 3GPP specifications, TDocs and meeting decisions with citations.",
+  "author": {
+    "name": "Carrot Labs AI, Inc.",
+    "email": "contact@3gppscout.com",
+    "url": "https://3gppscout.com"
+  },
+  "homepage": "https://3gppscout.com/mcp/claude/",
+  "repository": "https://github.com/carrotlabsai/3gpp-scout-mcp",
+  "license": "MIT",
+  "keywords": [
+    "3gpp",
+    "5g",
+    "nr",
+    "lte",
+    "telecom",
+    "specifications",
+    "tdocs"
+  ],
+  "icon": "./assets/logo.svg",
+  "documentationUrl": "https://3gppscout.com/mcp/claude/",
+  "supportUrl": "https://3gppscout.com/support.html",
+  "privacyPolicyUrl": "https://3gppscout.com/privacy/",
+  "termsOfServiceUrl": "https://3gppscout.com/terms.html",
+  "skills": ["./skills/"],
+  "mcpServers": "./.mcp.json"
+}

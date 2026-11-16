@@ -1,6 +1,7 @@
 {
   "mcpServers": {
     "3gpp-scout": {
+      "type": "http",
       "url": "https://api.3gppscout.com/mcp/"
     }
   }

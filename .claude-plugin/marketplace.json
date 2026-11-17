@@ -1,0 +1,26 @@
+{
+  "name": "3gpp-scout",
+  "description": "3GPP Scout plugin marketplace: search 3GPP specifications, TDocs and meeting decisions with citations.",
+  "owner": {
+    "name": "Carrot Labs AI, Inc.",
+    "email": "contact@3gppscout.com",
+    "url": "https://3gppscout.com"
+  },
+  "plugins": [
+    {
+      "name": "3gpp-scout",
+      "source": "./plugins/3gpp-scout",
+      "description": "Search 3GPP specifications, TDocs and meeting decisions with citations.",
+      "category": "productivity",
+      "tags": [
+        "3gpp",
+        "5g",
+        "nr",
+        "lte",
+        "telecom",
+        "specifications",
+        "tdocs"
+      ]
+    }
+  ]
+}

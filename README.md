@@ -55,7 +55,22 @@ Merge into `.cursor/mcp.json`:
 
 Enable **3gpp-scout** under Cursor Settings > Tools & MCP. The first tool call opens a browser for OAuth. Do not put a Scout API key in the MCP config.
 
-### Claude Code
+### Claude Code plugin
+
+```bash
+claude plugin marketplace add carrotlabsai/3gpp-scout-mcp
+claude plugin install 3gpp-scout@3gpp-scout
+```
+
+Or in one command (Claude Code v2.1.292 or later):
+
+```bash
+claude plugin install 3gpp-scout --marketplace carrotlabsai/3gpp-scout-mcp
+```
+
+Inside a session: `/plugin marketplace add carrotlabsai/3gpp-scout-mcp`, then `/plugin install 3gpp-scout@3gpp-scout`. Sign in with your Scout account when Claude Code opens the browser. The plugin bundles the hosted MCP server and the Scout skill under [`plugins/3gpp-scout`](plugins/3gpp-scout). Directory submission steps for the owner: [`docs/claude-code-directory-submission.md`](docs/claude-code-directory-submission.md).
+
+### Claude Code (MCP only)
 
 ```bash
 claude mcp add --transport http --scope user 3gpp-scout https://api.3gppscout.com/mcp/
@@ -141,7 +156,9 @@ Sign up: [dashboard.3gppscout.com](https://dashboard.3gppscout.com)
 | `SKILL.md` | Short agent skill that points at the hosted server |
 | `llms.txt` | Same facts in agent-readable form |
 | `.agents/plugins/marketplace.json` | Codex and ChatGPT desktop plugin marketplace |
+| `.claude-plugin/marketplace.json` | Claude Code plugin marketplace |
 | `plugins/3gpp-scout/` | The 3GPP Scout plugin (MCP server wiring and skill) |
+| `docs/claude-code-directory-submission.md` | Anthropic directory submission packet for Claude Code |
 
 `server.json` is discovery metadata. It does not contain credentials, prompts, or the search implementation. Do not open issues asking for the private monorepo or a self-host package. That is not what this repo is.
 

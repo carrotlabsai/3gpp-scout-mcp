@@ -141,7 +141,7 @@ No. 3GPP Scout is independent. It is not affiliated with, endorsed by, or a part
 
 ## Pricing
 
-The free Explorer tier includes 300 MCP/API requests per UTC calendar month, no card needed. Founding Engineer is $8/month for 1,000. Hosted chat at [app.3gppscout.com](https://app.3gppscout.com) uses separate prepaid credits.
+The free Explorer tier includes 300 MCP/API requests per UTC calendar month, no card needed. Founding Engineer is $8/month for 5,000. Hosted chat at [app.3gppscout.com](https://app.3gppscout.com) uses separate prepaid credits.
 
 Sign up: [dashboard.3gppscout.com](https://dashboard.3gppscout.com)
 

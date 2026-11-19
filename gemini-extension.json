@@ -1,0 +1,12 @@
+{
+  "name": "3gpp-scout",
+  "version": "1.2.1",
+  "description": "3GPP specs and meeting documents for Gemini CLI: clause-level, release-aware answers from Rel-15 to Rel-20 TS and TR, TDocs and meeting decisions, with citations. Hosted MCP server, sign in with OAuth.",
+  "mcpServers": {
+    "3gpp-scout": {
+      "url": "https://api.3gppscout.com/mcp/",
+      "type": "http"
+    }
+  },
+  "contextFileName": "SKILL.md"
+}

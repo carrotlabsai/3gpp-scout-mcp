@@ -35,7 +35,7 @@ Results carry citations: specification number, version, release and section for 
 
 Citations from the hosted chat app link to the specification's folder on the 3GPP FTP archive, not to a sentence-level PDF deep-link.
 
-## Connect an agent (Cursor, Claude, Codex)
+## Connect an agent (Cursor, Claude, Codex, Gemini CLI)
 
 Official registry name: [`com.3gppscout/scout`](https://registry.modelcontextprotocol.io/v0.1/servers?search=com.3gppscout/scout)
 
@@ -97,6 +97,14 @@ In the ChatGPT desktop app, open Plugins, add the plugin marketplace `carrotlabs
 codex mcp add 3gpp-scout --url https://api.3gppscout.com/mcp/
 codex mcp login 3gpp-scout
 ```
+
+### Gemini CLI extension
+
+```bash
+gemini extensions install https://github.com/carrotlabsai/3gpp-scout-mcp
+```
+
+The extension ([`gemini-extension.json`](gemini-extension.json)) adds the hosted MCP server and the Scout skill as context. Run `/mcp auth 3gpp-scout` in a session to sign in with your Scout account.
 
 ### Verify
 

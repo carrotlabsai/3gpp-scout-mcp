@@ -1,0 +1,23 @@
+LICENSE
+  s_858e52070d6927::t_353246e7f313df 3
+README.md
+  s_858e52070d6927::t_3d0af38cd26875 9,21,28-34,88,94-96,98-108,133,142,144,152-155
+glama.json
+  s_858e52070d6927::t_d9a30e36c49ded 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d5d9511844ded6bdfd3540260f26c2772d64596e",
+  "prompts": {},
+  "sessions": {
+    "s_858e52070d6927": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "f7b0ed2f-c130-47ef-8fe8-a58fba3fbf0c",
+        "model": "claude-sonnet-5-5-high"
+      },
+      "human_author": "Chris Acker <christopheracker1@gmail.com>"
+    }
+  }
+}
